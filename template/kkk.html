@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+
+
+ .button
+ {
+ background-color: #4CAF50;
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ width: 20%;
+ margin: 4px 2px;
+ cursor: pointer;
+ }
+ .button.setcolor:active {
+    background-color: red;
+ }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Predictive maintenance analysis</title>
+
+    <h1><center>PREDICTIVE MAINTENANCE ANALYSIS</center></h1>
+</head>
+
+<body style="background-color:#cfcfc4">
+
+<center><button onclick="location.href='{% url 'last.html' %}' " class="button" class={{status}} value="">Apparent Power</button></center><br>
+<center>{{ last1}}</center>
+<br>
+
+<center><button onclick="location.href='{% url 'avgg.html' %}'" class="button">Average Apparent Power</button></center><br>
+<center>{{ avgg}}</center>
+<br>
+
+<center><button onclick="location.href='{% url 'trr.html' %}'" class="button">True Power</button></center><br>
+<center>{{last2}}</center>
+<br>
+
+<center><button onclick="location.href='{% url 'travg.html' %}'" class="button">Average True Power</button></center><br>
+<center>{{ travg}}</center>
+<br>
+
+<center><button onclick="location.href='{% url 'amodu.html' %}'; tut()" class="button setcolor">Apparent Power Variation</button></center><br>
+<center>{{ amodu}}</center>
+<br>
+
+<script>
+    function changecolor(color){
+     //document.body.style.button=color;
+     }
+     function tut()
+     {
+     changecolor('red');
+     }
+
+
+
+</script>
+
+<center><button onclick="location.href='{% url 'modu.html' %}'" class="button setcolor">True Power Variation</button></center><br>
+<center>{{ modu}}</center>
+<br><br>
+
+</body>
+</html>
