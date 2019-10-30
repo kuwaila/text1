@@ -199,8 +199,6 @@ def amodu():
 
 def outputv(request):
     return render(request, 'kkk.html', {'amodu':amodu})
-    return render(request, self.template, {'status': 'button btn-success'})
-    return render(request, self.template, {'status': 'button btn-danger'})
 
 
 
